@@ -1,0 +1,1 @@
+export const REST_COUNTRIES_KEY = 'PASTE_KEY_HERE';
