@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, map } from 'rxjs';
 import { Country } from '../country-model';
+import { REST_COUNTRIES_KEY } from '../api-key';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CountryService {
 
-  private apiKey = 'rc_live_8388cc233dfe475ea59a65e77e64e394';
+  private apiKey = REST_COUNTRIES_KEY;
   private baseUrl = 'https://api.restcountries.com/countries/v5'
 
   private selectedCountrySubject = new BehaviorSubject<Country | undefined>(undefined);
