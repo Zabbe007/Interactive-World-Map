@@ -1,0 +1,34 @@
+<header>
+  <h1 class="main-heading">{{title}}</h1>
+</header>
+    
+<main class="content-container"> 
+  
+  <section class="map-panel"> 
+    <router-outlet></router-outlet> 
+  </section> 
+  
+  <aside class="info-panel"> 
+    <h2>Country Information</h2> 
+    
+    <ng-container *ngIf="selectedCountry$ | async as country">
+      <img [src]="country.flagUrl" alt="Flag of {{country.name}}" width="120">
+      <p>Name: {{country.name}}</p>
+      <p>Capital: {{country.capital}}</p>
+      <p>Government Type: {{country.governmentType}}</p>
+      <p>Region: {{country.region}}</p>
+      <p>Subregion: {{country.subregion}}</p>
+      <p>Population: {{country.population | number:'1.0-0'}}</p>
+      <p>Area: {{country.areaKm | number:'1.0-0'}} km²</p>
+      <p>Currencies: {{country.currencies}}</p>
+      <p>Languages: {{country.languages}}</p>
+      <p>Latitude: {{country.latitude | number:'1.2-2'}}</p>
+      <p>Longitude: {{country.longitude | number:'1.2-2'}}</p> 
+      <p>Description: {{country.description}}</p>
+    </ng-container>
+    <p *ngIf="!(selectedCountry$ | async)">Click a country to see its information.</p>
+
+  </aside>
+
+</main>
+

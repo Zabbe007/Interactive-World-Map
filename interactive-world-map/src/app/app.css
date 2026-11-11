@@ -1,0 +1,26 @@
+.main-heading {
+    font-family: 'Courier New';
+    color: rgb(83, 85, 80);
+    background-color: rgb(140, 184, 100);
+    text-align: center;
+    border: 2px solid rgb(110, 114, 108);
+}
+
+.content-container {
+  display: flex;
+  gap: 20px;
+}
+
+.map-panel {
+  flex: 3;
+  padding: 1rem;
+}
+
+.info-panel {
+  font-family: 'Courier New';
+  background-color: rgb(222, 226, 218);
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #c7c4c4;
+  border-radius: 8px;
+}
