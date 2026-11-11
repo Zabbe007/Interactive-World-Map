@@ -1,9 +1,26 @@
+svg {
+  background-color: rgb(235, 242, 250);
+  border-radius: 8px;
+}
+
 path {
   fill: rgb(65, 62, 62);
   transition: fill 0.2s ease;
 }
 
 path:hover {
-  fill: rgb(114, 196, 94);
+  fill: rgba(170, 173, 169, 0.712);
   cursor: pointer;
+  stroke: rgb(14, 13, 13);
+  stroke-width: 0.2;
+}
+
+path.visited {
+  fill-opacity: 0.7;
+  stroke: rgb(14, 13, 13);
+  stroke-width: .2;
+}
+
+path.visited:hover {
+  filter: brightness(1.15);
 }

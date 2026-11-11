@@ -17,6 +17,10 @@ export class WorldMap {
     if (!target.id) {
       return;
     }
+    if (!target.classList.contains('visited')) {
+      target.style.fill = this.randomColor();
+      target.classList.add('visited');
+    } 
     this.loadCountryData(target.id);
   
   }
@@ -39,6 +43,13 @@ export class WorldMap {
         }
     });
   }
+
+  private randomColor(): string {
+    const hue = Math.floor(Math.random() * 360);
+    const saturation = 50 + Math.floor(Math.random() * 51);   // 50% to 100%
+    const lightness = 20 + Math.floor(Math.random() * 46);
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+}
 }
 
        
