@@ -1,9 +1,11 @@
+
 # Interactive World Map
 
 An Angular single-page app where clicking any country on an SVG world map displays live data about it, including its flag, capital, population, languages, and more. Country data comes from the [REST Countries API](https://restcountries.com/).
 
 **[Live demo](https://Zabbe007.github.io/Interactive-World-Map/)**
 
+<img width="1899" height="901" alt="interactive-world-map" src="https://github.com/user-attachments/assets/703678f6-c736-4f52-897e-a2234df90686" />
 
 ## Features
 
